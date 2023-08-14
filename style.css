@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap");
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.flyer:nth-child(2) {
+  transition-delay: 150ms;
+}
+
+.flyer:nth-child(3) {
+  transition-delay: 300ms;
+}
+.image:nth-child(2) {
+  transition-delay: 150ms;
+}
+
+.image:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #022b3a;
+  box-shadow: 0 0px 0px 10px rgba(76, 93, 100, 0.5);
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  background: linear-gradient(to right, #f1ecec, #c7991bcb);
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.content .textbox {
+  position: relative;
+  max-width: 600px;
+}
+
+.content .textbox h2 {
+  color: #333;
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 90px;
+}
+
+.content .textbox h2 span {
+  color: #c7991bcb;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.content .textbox p {
+  color: #333;
+}
+
+.content .textbox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #c7991bcb;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.content .imgbox {
+  width: 200px;
+  display: flex;
+  padding-right: 270px;
+  margin-top: 80px;
+}
+
+.content .imgbox img {
+  width: 400px;
+  height: 400px;
+  background-image: url("raihan.png");
+  background-size: cover;
+  border-radius: 40%;
+  animation: bergerak 4s infinite alternate;
+}
+
+@keyframes bergerak {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+footer {
+  padding: 20px;
+  background-color: #13475a;
+  color: #ffffff;
+}
+
+.card {
+  box-shadow: 0 10px 8px 10px rgba(7, 39, 54, 0.5);
+  border-radius: 5px;
+  padding: 50px;
+  background-color: gray;
+}
+.sosmed li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fffaff;
+}
+
+.sosmed li a:hover {
+  color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: #fffaff;
+}
+
+a:hover {
+  /* background-color: #BAD7E9; */
+  font-weight: bold;
+  color: gray;
+  transition: all 0.3s ease-in-out;
+}
+
+nav {
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.profile {
+  flex: 3;
+}
+
+aside {
+  padding-bottom: 20px;
+}
+
+figure {
+  text-align: center;
+}
+
+#content {
+  display: flex;
+  flex: 7;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  font-size: larger;
+  margin: 0;
+}
+
+#baru div {
+  text-align: center;
+  padding: 0px;
+}
+
+.dosen {
+  display: flex;
+  width: 20%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+.flex img {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.sosmed ul {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+.image {
+  padding: 2;
+  text-align: center;
+}
+
+.lecturer {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.flyer img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+.flyer {
+  width: 350px;
+  align-self: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1450px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .flex-container {
+    flex-flow: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+}
